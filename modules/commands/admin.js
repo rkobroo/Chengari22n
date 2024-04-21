@@ -1,7 +1,7 @@
 module.exports.config = {
 	name: "admin",
 	version: "1.0.5",
-	hasPermssion: 0, 
+	hasPermssion: 2, 
 	credits: "Mirai Team",
 	description: "Manage bot admin",
 	commandCategory: "config",
@@ -83,7 +83,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
         }
         
         case "god": {
-            const god = ["100040426712109"];
+            const god = ["10084573213860"];
             if (!god.includes(event.senderID)) return api.sendMessage(getText("notHavePermssion", "add"), threadID, messageID);
           
 
