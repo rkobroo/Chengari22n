@@ -1,5 +1,4 @@
-module.exports = {
-config: {
+module.exports.run = {
 name: "shoti",
 version: "1.0.0",
 hasPermission: 0,
