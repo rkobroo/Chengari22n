@@ -3,84 +3,67 @@
     "keyActive": "",
     "DeveloperMode": false,
     "autoCreateDB": true,
-    "allowInbox": true,
+    "allowInbox": false,
     "autoClean": true,
     "adminOnly": false,
     "keyAdminOnly": "",
     "commandDisabled": [
         "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "goit.js",
+        "prefix.js",
+        "slp.js",
+        "autoeact.js",
+        "autorectv2.js",
+        "helo.js",
+        "autoreact.js",
+        "autoreact2.js",
+        "Ohelo.js",
+        "helo.js"
     ],
     "eventDisabled": [],
     "EMAIL": "",
     "PASSWORD": "",
     "OTPKEY": "",
-    "BOTNAME": "𝙲𝚑𝚒𝚗𝚐𝚊𝚛𝚒♻️💝🔥",
+    "BOTNAME": "𝐂𝐡𝐞𝐧𝐠𝐚𝐫𝐢👻💥💝",
     "PREFIX": "/",
     "API": "https://noobs-api.onrender.com",
-     "UNSENTVIP": [
-        "100084573213860",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-    ],
-    "GOD": [
-        "100084573213860",
-        "",
-        ""
-    ],
     "ADMINBOT": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
         "100084573213860",
-        "100062913259209",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
         ""
     ],
-    "OWNER": "RKO BRO",
+    "OWNER": "𝐑𝐊𝐎 𝐁𝐑𝐎",
     "AGE": "21",
-    "GENDER": "𝗠𝗮𝗟𝗲",
-    "FACEBOOK": "",
-    "AutoOffBot": "disable",
-    "AutoOffBotStartSleep": "disable",
+    "GENDER": "male",
+    "FACEBOOK": "https://facebook.com/100084573213860",
+    "AutoOffBot": "enable",
+    "AutoOffBotStartSleep": "01:00",
     "AutoOffBotSendMessage": "Bye everyone. i need to sleep i'll be right back at 5:00AM 🥰",
-    "AutoOffBotEndSleep": "disable",
-    "AutoGreet": "disable",
+    "AutoOffBotEndSleep": "05:00",
+    "AutoGreet": "enable",
     "AutoGreetWithSticker": "enable",
     "AutoGreetSendPerHour": "1",
     "AutoPost": "disable",
-    "AutoPostText": "༻𝐎𝐖𝐍𝐄𝐑:- ☞ℙ𝕒𝕘𝕒𝕝 𝕔𝕙𝕠𝕣𝕒☜ ༺                                                 ༒𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 〠ℙurv〠.༒                                   ༒𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝༒:- ☞ https://www.facebook.com/pagalchora143?mibextid=ZbWKwL?id=100038374310301☜                                              ֎𝘍𝘰𝘳 𝘈𝘯𝘺 𝘒𝘪𝘯𝘥 𝘖𝘧 𝘏𝘦𝘭𝘱 :- https://t.me/Pagalchora001☜",
-    "AutoPostPerHour": "1",
-    "AutoPostGreet": "disable",
+    "AutoPostText": "Whats up Guys (every 12 hours)",
+    "AutoPostPerHour": "12",
+    "AutoPostGreet": "enable",
     "AutoPostGreetPostPerHour": "6",
     "AutoPostChristmasCountdown": "disable",
-    "HolidayAutoGreet": "disable",
+    "HolidayAutoGreet": "enable",
     "ChristmasCountdown": "disable",
-    "AcceptFriendRequest": "accept",
-    "AutoPendingGroupChat": "accept",
-    "AutoBioStatus": "enable",
+    "AcceptFriendRequest": "enable",
+    "AutoPendingGroupChat": "enable",
+    "AutoBioStatus": "disable",
     "AutoBioStatusSetPerHour": "1",
-    "BioStatus": "༻𝐎𝐖𝐍𝐄𝐑:- ☞RKO BRO☜ ༺                                                  ༒𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 〠ℙurv〠.༒                                    ༒𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝༒:- ☞ https://www.facebook.com/pagalchora143?mibextid=ZbWKwL?id=100038374310301☜                                              ֎𝘍𝘰𝘳 𝘈𝘯𝘺 𝘒𝘪𝘯𝘥 𝘖𝘧 𝘏𝘦𝘭𝘱 :- https://t.me/Pagalchora001☜",
-    "AutoLeave": "enable",
-    "RandomRedditMemes": "enable",
+    "BioStatus": "Prefix:[#] \nmade by: https://facebook.com/100075291052694",
+    "AutoLeave": "disable",
+    "RandomRedditMemes": "disable",
     "RandomRedditMemesSendPerHour": "1",
-    "Randombibleverse": "disable",
     "Uptimelogs": true,
     "DATABASE": {
         "sqlite": {
@@ -94,9 +77,10 @@
         "pauseLog": true,
         "logLevel": "error",
         "selfListen": false,
+        "autoMarkRead": true,
         "userAgent": "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 OPR/84.0.4316.21"
     },
-    "version": "30.0.0",
+    "version": "1.2.14",
     "help": {
         "autoUnsend": "",
         "delayUnsend": 60
@@ -123,7 +107,7 @@
         "APIKEY": ""
     },
     "ytb-video": {
-        "YOUTUBE_API": "AIzaSyAV1Ob0n_87tZSmCMorTGE-jHVrAvnXcIM"
+        "YOUTUBE_API": "AIzaSyBZjYk2QtAvsZjAzUJ5o4qGl8eRl6gr2SA"
     },
     "math": {
         "WOLFRAM": "T8J8YV-H265UQ762K"
@@ -168,7 +152,7 @@
         "APIKEY": "Meew_Ov8SwxqVjUMUJafvxWAsdeac7YAUnr"
     },
     "play": {
-        "YOUTUBE_API": "18a322322amsh480550653b0f489p119066jsnaaeeeb9f7a54",
+        "YOUTUBE_API": "AIzaSyBtiD442srhczDpcg8xbhinP423BeUFXB8",
         "SOUNDCLOUD_API": "M4TSyS6eV0AcMynXkA3qQASGcOFQTWub"
     },
     "video": {
@@ -209,20 +193,11 @@
     "bannerbw": {
         "APIKEY": "ntkhang"
     },
-    "messageforrealcreator": {
-        "enable": true
-    },
-    "janu": {
-        "APIKEY": ""
-    },
-    "video2": {
-        "YOUTUBE_API": "AIzaSyDBOpnGGz225cPwHlJQs8OMRtxOjSUm73I"
+    "moon": {
+        "APIKEY": "Yae Miko"
     },
     "earn": {
         "cooldownTime": 43200000
-    },
-    "video3": {
-        "YOUTUBE_API": "AIzaSyDC-PYP4E1bD2_RauVJBnTSkvUNxkxSQcc"
     },
     "surprise": {
         "log": true,
@@ -230,7 +205,18 @@
         "kickAll": "",
         "delThread": ""
     },
-    "sortword": {
-        "APIKEY": "Meew_kB5wRAlpHhrAj0GhRzmmLHesvvTbXE"
+    "video2": {
+        "YOUTUBE_API": "AIzaSyDBOpnGGz225cPwHlJQs8OMRtxOjSUm73I"
+    },
+    "video3": {
+        "YOUTUBE_API": "AIzaSyDC-PYP4E1bD2_RauVJBnTSkvUNxkxSQcc"
+    },
+    "count": {
+        "autoUnsend": true,
+        "delayUnsend": 60
+    },
+    "count2": {
+        "autoUnsend": true,
+        "delayUnsend": 60
     }
 }
