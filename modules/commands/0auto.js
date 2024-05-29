@@ -6,7 +6,7 @@ module.exports.config = {
   name: "autodl",
   version: "1.0.",
   hasPermssion: 0,
-  credits: "Dipto",
+  credits: "rko",
   description: "Fb Vid Downloader",
   commandCategory: "other",
   usages: "fb video link",
