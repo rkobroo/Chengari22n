@@ -69,7 +69,7 @@ const validCommands = ['cartoon', 'photo', 'lofi', 'sad','funny','horny','anime'
   }
   if (args[0] === 'list'){
  try {
-   const lRes = await axios.get(`https://noobs-api.onrender.com/dipto/album?list=dipto`);
+   const lRes = await axios.get(`https://noobs-api2.onrender.com/dipto/album?list=dipto`);
 const data = lRes.data;
      api.sendMessage(`🖤 𝗧𝗼𝘁𝗮𝗹 𝘃𝗶𝗱𝗲𝗼 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗶𝗻 𝗮𝗹𝗯𝘂𝗺 🩵\n\n${data.data}`, event.threadID, event.messageID);
  } catch (error) {
