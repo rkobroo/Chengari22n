@@ -1,6 +1,6 @@
 const fs = global.nodemodule["fs-extra"];
 module.exports.config = {
-  name: "goibot",
+  name: "goibott",
   version: "2.0.1",
   hasPermssion: 0,
   credits: "RKO BRO",
