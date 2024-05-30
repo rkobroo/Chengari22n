@@ -62,13 +62,13 @@ module.exports.run = async function({ api, event, args }) {
         ctx.font = "450 70px Arial";
         ctx.fillStyle = "#000000";
         ctx.textAlign = "start";
-        let fontSize = 700;
-        while (ctx.measureText(text).width > 2400) {
+        let fontSize = 680;
+        while (ctx.measureText(text).width > 2350) {
                 fontSize--;
-                ctx.font = `300 ${fontSize}px Arial, sans-serif`;
+                ctx.font = `280 ${fontSize}px Arial, sans-serif`;
         }
-        const lines = await this.wrapText(ctx, text, 1050);
-        ctx.fillText(lines.join('\n'), 140,280);//comment
+        const lines = await this.wrapText(ctx, text, 1000);
+        ctx.fillText(lines.join('\n'), 120,250);//comment
         ctx.beginPath();
         const imageBuffer = canvas.toBuffer();
         fs.writeFileSync(pathImg, imageBuffer);
