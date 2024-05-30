@@ -59,16 +59,16 @@ module.exports.run = async function({ api, event, args }) {
         let canvas = createCanvas(baseImage.width, baseImage.height);
         let ctx = canvas.getContext("2d");
         ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
-        ctx.font = "600 70px Arial";
+        ctx.font = "450 70px Arial";
         ctx.fillStyle = "#000000";
         ctx.textAlign = "start";
         let fontSize = 700;
-        while (ctx.measureText(text).width > 2600) {
+        while (ctx.measureText(text).width > 2450) {
                 fontSize--;
                 ctx.font = `350 ${fontSize}px Arial, sans-serif`;
         }
-        const lines = await this.wrapText(ctx, text, 1160);
-        ctx.fillText(lines.join('\n'), 200,400);//comment
+        const lines = await this.wrapText(ctx, text, 1140);
+        ctx.fillText(lines.join('\n'), 150,300);//comment
         ctx.beginPath();
         const imageBuffer = canvas.toBuffer();
         fs.writeFileSync(pathImg, imageBuffer);
