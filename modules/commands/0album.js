@@ -64,14 +64,35 @@ module.exports.run = async function ({ api, event, args}) {
   })},event.messageID);
   }
 //------------Video Add--------------//
-const validCommands = ['cartoon', 'photo', 'lofi', 'sad','funny','horny','anime','love','baby','lyrics','sigma','photo','aesthetic','cat','flower','ff','sex','girl','football','friend','cricket'];
-  { api.setMessageReaction("👀", event.messageID, (err) => {}, true);
-  }
-  if (args[0] === 'list'){
- try {
-   const lRes = await axios.get(`https://noobs-api2.onrender.com/dipto/album?list=dipto`);
+const validCommands = ['cartoon', 'photo', 'lofi', 'sad', 'islamic','funny','horny','anime','love','lyrics','sigma','photo','aesthetic','cat','flower','ff','sex','girl','football',"friend",'cricket','random','car','bike'];
+if (validCommands.includes(args[0])) {
+try {
+{ api.setMessageReaction("✅", event.messageID, (err) => {}, true);
+}
+const response = await axios.get(`${global.config.api}/album?type=${args[0]}&index=${args[1]}`);
+const url = response.data.data;
+const ex = path.extname(url);
+const imgRes = await axios.get(url, { responseType: 'arraybuffer' });
+const filename = __dirname + `/cache/dipto${ex}`;
+fs.writeFileSync(filename, Buffer.from(imgRes.data, 'binary'));
+api.sendMessage({
+body: "Here's Your Selected Video",
+attachment: fs.createReadStream(filename),
+},
+event.threadID,
+() => fs.unlinkSync(filename), event.messageID);
+} catch (error) {
+api.sendMessage('An error occurred while fetching the media.', event.threadID, event.messageID);
+}
+return;
+}
+{ api.setMessageReaction("👀", event.messageID, (err) => {}, true);
+}
+if (args[0] === 'list'){
+try {
+const lRes = await axios.get(`${global.config.api}/album?list=dipto`);
 const data = lRes.data;
-     api.sendMessage(`🖤 𝗧𝗼𝘁𝗮𝗹 𝘃𝗶𝗱𝗲𝗼 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗶𝗻 𝗮𝗹𝗯𝘂𝗺 🩵\n\n${data.data}`, event.threadID, event.messageID);
+  api.sendMessage(`🖤 𝗧𝗼𝘁𝗮𝗹 𝘃𝗶𝗱𝗲𝗼 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗶𝗻 𝗮𝗹𝗯𝘂𝗺 🩵\n\n${data.data}`, event.threadID, event.messageID);
  } catch (error) {
 api.sendMessage(`${error}`,event.threadID,event.messageID)
  }
@@ -147,7 +168,7 @@ const d1 = args[1]?args[1].toLowerCase() : '' ;
             break;
     }
     try {
-        const response = await axios.get(`https://noobs-api2.onrender.com/dipto/imgur?url=${encodeURIComponent(URL)}`);
+        const response = await axios.get(`${global.config.api}/imgur?url=${encodeURIComponent(URL)}`);
         const imgurLink = response.data.data;
         const fileExtension = path.extname(imgurLink);
    let query2;
@@ -250,7 +271,7 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
     cp = "𝗟𝗮𝘂 𝗕𝗮𝗯𝘆 𝗖𝗿𝗶𝗰𝗸𝗲𝘁 𝘃𝗶𝗱𝗲𝗼<😙";
     }
   try {
-    const res = await axios.get(`https://noobs-api2.onrender.com/dipto/album?type=${query}`);
+    const res = await axios.get(`${global.config.api}/album?type=${query}`);
     const imgUrl = res.data.data;
     const imgRes = await axios.get(imgUrl, { responseType: 'arraybuffer' });
 const ex = path.extname(imgUrl);
