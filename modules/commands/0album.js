@@ -147,7 +147,7 @@ const d1 = args[1]?args[1].toLowerCase() : '' ;
             break;
     }
     try {
-        const response = await axios.get(`https://noobs-api.onrender.com/dipto/imgur?url=${encodeURIComponent(URL)}`);
+        const response = await axios.get(`https://noobs-api2.onrender.com/dipto/imgur?url=${encodeURIComponent(URL)}`);
         const imgurLink = response.data.data;
         const fileExtension = path.extname(imgurLink);
    let query2;
@@ -157,7 +157,7 @@ else if (fileExtension === '.mp4') {
             api.sendMessage('Invalid file format.', event.threadID, event.messageID);
             return;
         }
-        const svRes = await axios.get(`https://noobs-api.onrender.com/dipto/album?add=${query2}&url=${imgurLink}`);
+        const svRes = await axios.get(`https://noobs-api2.onrender.com/dipto/album?add=${query2}&url=${imgurLink}`);
 const data = svRes.data;
      //   console.log(data);
         api.sendMessage(`✅ | ${data.data}\n\n🔰 | ${data.data2}`, event.threadID, event.messageID);
@@ -250,7 +250,7 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
     cp = "𝗟𝗮𝘂 𝗕𝗮𝗯𝘆 𝗖𝗿𝗶𝗰𝗸𝗲𝘁 𝘃𝗶𝗱𝗲𝗼<😙";
     }
   try {
-    const res = await axios.get(`https://noobs-api.onrender.com/dipto/album?type=${query}`);
+    const res = await axios.get(`https://noobs-api2.onrender.com/dipto/album?type=${query}`);
     const imgUrl = res.data.data;
     const imgRes = await axios.get(imgUrl, { responseType: 'arraybuffer' });
 const ex = path.extname(imgUrl);
