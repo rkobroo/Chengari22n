@@ -1,101 +1,48 @@
-[
-    {
-        "key": "dbln",
-        "value": "%7B%22100052250385822%22%3A%22ZK7FvNDv%22%2C%2261557976184172%22%3A%22IIohNbxz%22%7D",
-        "domain": "facebook.com",
-        "path": "/login/device-based/",
-        "hostOnly": false,
-        "creation": "2024-06-02T01:42:02.528Z",
-        "lastAccessed": "2024-06-02T01:42:02.528Z"
-    },
-    {
-        "key": "sb",
-        "value": "AMhWZhGsW559Vs3zy3dtit16",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2024-06-02T01:42:02.528Z",
-        "lastAccessed": "2024-06-02T01:42:02.528Z"
-    },
-    {
-        "key": "datr",
-        "value": "RAlXZuuIe0hMnhbulvKCe1OA",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2024-06-02T01:42:02.528Z",
-        "lastAccessed": "2024-06-02T01:42:02.528Z"
-    },
-    {
-        "key": "ps_n",
-        "value": "1",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2024-06-02T01:42:02.528Z",
-        "lastAccessed": "2024-06-02T01:42:02.528Z"
-    },
-    {
-        "key": "ps_l",
-        "value": "1",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2024-06-02T01:42:02.528Z",
-        "lastAccessed": "2024-06-02T01:42:02.528Z"
-    },
-    {
-        "key": "c_user",
-        "value": "61557976184172",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2024-06-02T01:42:02.528Z",
-        "lastAccessed": "2024-06-02T01:42:02.528Z"
-    },
-    {
-        "key": "xs",
-        "value": "5%3A1NI1DK3QZSKSQQ%3A2%3A1717292489%3A-1%3A3362",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2024-06-02T01:42:02.528Z",
-        "lastAccessed": "2024-06-02T01:42:02.528Z"
-    },
-    {
-        "key": "fr",
-        "value": "0XDjxNdxKGHBWZD5u.AWXr_DWKbCUTFmsh1_Qvdhyyxhg.BmVwl5..GZZ.0.0.BmW83J.AWXC4dXl0Bg",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2024-06-02T01:42:02.528Z",
-        "lastAccessed": "2024-06-02T01:42:02.529Z"
-    },
-    {
-        "key": "m_page_voice",
-        "value": "61557976184172",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2024-06-02T01:42:02.529Z",
-        "lastAccessed": "2024-06-02T01:42:02.529Z"
-    },
-    {
-        "key": "m_pixel_ratio",
-        "value": "1.5403207540512085",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2024-06-02T01:42:02.529Z",
-        "lastAccessed": "2024-06-02T01:42:02.529Z"
-    },
-    {
-        "key": "wd",
-        "value": "1113x1941",
-        "domain": "facebook.com",
-        "path": "/",
-        "hostOnly": false,
-        "creation": "2024-06-02T01:42:02.529Z",
-        "lastAccessed": "2024-06-02T01:42:02.529Z"
+module.exports.config = {
+  name: "autodl",
+  version: "1.0.",
+  hasPermission: 0,
+  credits: "RKO BRO",
+  description: "All Video Downloader",
+  commandCategory: "Downloader",
+  usages: "[video link]",
+  cooldowns: 0
+};
+
+module.exports.handleEvent = async function ({ api, event, client, __GLOBAL }) {
+  const axios = require('axios');
+  const fs = require('fs-extra');
+  let dipto = event.body ? event.body : '';
+  try {
+    if (dipto.startsWith('https://vt.tiktok.com') || dipto.startsWith('https://www.facebook.com') || dipto.startsWith('https://www.instagram.com/') || dipto.startsWith('https://youtu.be/') || dipto.startsWith('https://youtube.com/') || dipto.startsWith('https://x.com/') || dipto.startsWith('https://twitter.com/') || dipto.startsWith('https://vm.tiktok.com') || dipto.startsWith('https://www.capcut.com') || dipto.startsWith('https://fb.watch')) {
+      api.sendMessage("", event.threadID, event.messageID);
+      if (!dipto) {
+        api.sendMessage("please put a valid video link", event.threadID, event.messageID);
+        return;
+      }
+
+      const aa = await axios.get(`https://noobs-api2.onrender.com/dipto/alldl?url=${encodeURIComponent(dipto)}`);
+      const bb = aa.data;
+      const filePath = __dirname + `/cache/diptoo.mp4`;
+      const vid = (await axios.get(bb.result, { responseType: "arraybuffer" })).data;
+      fs.writeFileSync(filePath, Buffer.from(vid, 'utf-8'));
+      api.sendMessage({
+        body: `${bb.cp} ♻️𝗖𝗥𝗘𝗗𝗜𝗧:𝗥𝗞𝗢 𝗕𝗥𝗢💝💞 `,
+        attachment: fs.createReadStream(filePath)
+      }, event.threadID, () => fs.unlinkSync(filePath), event.messageID)
     }
-]
+    if (dipto.startsWith('https://i.imgur.com')) {
+      const dipto3 = dipto.substring(dipto.lastIndexOf('.'));
+      const response = await axios.get(dipto, { responseType: 'arraybuffer' });
+      const filename = __dirname + `/cache/dipto${dipto3}`;
+      fs.writeFileSync(filename, Buffer.from(response.data, 'binary'));
+      api.sendMessage({
+        body: `Downloaded from link`,
+        attachment: fs.createReadStream(filename)
+      }, event.threadID, () => fs.unlinkSync(filename), event.messageID)
+    }
+  } catch (e) {
+    api.sendMessage(`Photo download hudaina💝`, event.threadID, event.messageID);
+  }
+};
+module.exports.run = function ({ api, event, client, __GLOBAL }) {}
