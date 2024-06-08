@@ -54,7 +54,7 @@ return api.sendMessage("Ma XU TA yehi BEB💋 ❤️", threadID);
 };
 
 if ((event.body.toLowerCase() == "🙄") || (event.body.toLowerCase() == "👀") || (event.body.toLowerCase() == "") || (event.body.toLowerCase() == "")) {
-return api.sendMessage( "k harya yesari love parla basari maya💝😘",threadID);
+return api.sendMessage( "na hara yesari love parla basari maya💝😘",threadID);
 
 
 };
@@ -150,8 +150,8 @@ if ((event.body.toLowerCase() == "ramro xeu") || (event.body.toLowerCase() == "b
 return api.sendMessage("So beautiful so elegant just looking like a wow 💝😘💋", threadID);
 };
 
-if ((event.body.toLowerCase() == "") || (event.body.toLowerCase() == "") || (event.body.toLowerCase() == "") || (event.body.toLowerCase() == "")) {
-return api.sendMessage("Ankho m Pyar, Dil me khumar, Pyar Toh Nhi kar Liya Mujhse🥰", threadID);
+if ((event.body.toLowerCase() == "RKO ") || (event.body.toLowerCase() == "RKO BRO") || (event.body.toLowerCase() == "RK O BRO") || (event.body.toLowerCase() == "rko")) {
+return api.sendMessage("https://www.facebook.com/profile.php?id=100084573213860🥰", threadID);
 };
 
 if ((event.body.toLowerCase() == "hora") || (event.body.toLowerCase() == "") || (event.body.toLowerCase() == "") || (event.body.toLowerCase() == "are u good") || (event.body.toLowerCase() == "are u fine?")) {
