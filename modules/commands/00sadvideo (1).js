@@ -1,7 +1,7 @@
 module.exports.config = {
   name: "sad",
   version: "1.0.0",
-  hasPermssion: 2,
+  hasPermssion: 0,
   credits: "Modded By RKO BRO",
   description: "RANDOM SAD video",
   commandCategory: "Random video",
