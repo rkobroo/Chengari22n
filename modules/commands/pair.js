@@ -4,7 +4,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "RKO BRO",
   description: "It's a compound :>",
-  commandCategory: "Giải trí",
+  commandCategory: "make jodi",
   usages: "",
   dependencies: {
         "axios": "",
