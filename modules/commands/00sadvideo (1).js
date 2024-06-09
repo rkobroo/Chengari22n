@@ -6,7 +6,7 @@ module.exports.config = {
   description: "RANDOM SAD video",
   commandCategory: "Random video",
   usages: "status",
-  cooldowns: 2,
+  cooldowns: 5,
   dependencies: {
     "request":"",
     "fs-extra":"",
