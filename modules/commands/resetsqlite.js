@@ -18,7 +18,7 @@ const { exec } = require("child_process");
 const process = require("process");
 const { threadID, messageID } = event;
 let text = args.join(" ")
-exec(`rm -rf ../../Nayan/system/database/datasqlite/Nayan.sqlite`, (error, stdout, stderr) => {
+exec(`rm -rf ../../system/database/datasqlite/data.sqlite`, (error, stdout, stderr) => {
     if (error) {
         api.sendMessage(`error : \n${error.message}`, event.threadID, event.messageID);
         return;
